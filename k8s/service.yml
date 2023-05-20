@@ -4,7 +4,6 @@ metadata:
   labels:
     app: react-service
   name: react-service
-  namespace: dev
 spec:
   ports:
   - port: 80

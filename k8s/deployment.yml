@@ -4,7 +4,6 @@ metadata:
   labels:
     app: react-deployment
   name: react-deployment
-  namespace: dev
 spec:
   replicas: 1
   selector:
@@ -16,7 +15,7 @@ spec:
         app: react-deployment
     spec:
       containers:
-      - image: huyvt269/react-template:latest
+      - image: vuthehuyt61/react-template:main
         imagePullPolicy: Always
         name: react-deployment
         ports:
