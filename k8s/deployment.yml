@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: react-deployment
+  name: react-deployment
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-deployment
+  template:
+    metadata:
+      labels:
+        app: react-deployment
+    spec:
+      containers:
+      - image: huyvt269/react-template:latest
+        imagePullPolicy: Always
+        name: react-deployment
+        ports:
+        - containerPort: 80
